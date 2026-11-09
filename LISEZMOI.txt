@@ -1,0 +1,32 @@
+Site de mariage Benito & Darelle
+
+Pour voir le site : double-cliquez sur index.html (il s'ouvre dans votre navigateur).
+Pour le mettre en ligne : envoyez ce dossier chez un hébergeur (Netlify, Vercel, GitHub Pages...)
+en gardant le fichier index.html à la racine.
+
+Toutes les photos sont déjà dans index.html. Une connexion internet est utile
+seulement pour les polices d'écriture (Google Fonts).
+
+Enregistrer les réponses RSVP dans un tableau
+
+Le formulaire peut enregistrer les réponses (présence et absence) dans Google
+Sheets. Pour activer cette fonction :
+
+1. Créez une feuille Google Sheets pour les réponses.
+2. Dans cette feuille, ouvrez Extensions > Apps Script.
+3. Ouvrez google-sheets-rsvp.gs avec un éditeur de texte et copiez son contenu
+	dans le fichier Code.gs de l'éditeur Apps Script. Enregistrez.
+4. Cliquez sur Déployer > Nouveau déploiement, choisissez Application Web,
+	sélectionnez « Moi » pour l'exécution et « Tout le monde » pour l'accès,
+	puis déployez et autorisez le script.
+5. Copiez l'URL de l'application Web qui se termine par /exec.
+6. Dans index.html, remplacez COLLER_ICI_URL_DU_SCRIPT_APPS dans
+	RSVP_SHEET_ENDPOINT par cette URL, puis remettez le site en ligne.
+
+Les réponses apparaîtront dans l'onglet « Réponses », avec le lien de l'invité
+avec les mariés. Après toute modification de google-sheets-rsvp.gs, créez un
+nouveau déploiement ou modifiez le déploiement existant pour que les changements
+soient pris en compte. Pour obtenir un fichier Excel, dans Google Sheets
+choisissez Fichier > Télécharger > Microsoft Excel.
+L'URL de l'application Web est publique afin que les invités puissent envoyer
+leurs réponses; ne mettez pas d'informations sensibles dans ce tableau.
